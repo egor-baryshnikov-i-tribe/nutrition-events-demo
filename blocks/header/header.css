@@ -4,6 +4,7 @@
     background: white;
     height: 156px;
     position: fixed;
+    z-index: 999;
 
     a {
         transition: text-shadow .3s;
