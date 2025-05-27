@@ -12,6 +12,34 @@
     a:hover {
         text-shadow: 0 .4px #0063be, 0 -.4px #0063be, .4px 0 #0063be, -.4px 0 #0063be;
     }
+
+    .nav-menu .list {
+        display: none;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: 10px 0;
+        margin: 0;
+        background-color: white;
+
+        a {
+            white-space: nowrap;
+        }
+    }
+
+    .nav-menu .item[aria-expanded="true"] .list,
+    .nav-menu .item:hover .list {
+        display: block;
+    }
+
+    .nav-menu .list li {
+        padding: 10px 30px;
+    }
+
+    .nav-menu ul {
+        list-style: none;
+    }
 }
 
 .header-container {
@@ -46,33 +74,4 @@
 
 .item {
     position: relative;
-}
-
-.nav-menu .list {
-    display: none;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
-    position: absolute;
-    left: 0;
-    top: 100%;
-    padding: 10px 0;
-    margin: 0;
-    background-color: white;
-
-    a {
-        white-space: nowrap;
-    }
-}
-
-.nav-menu .item[aria-expanded="true"] .list,
-.nav-menu .item:hover .list
-{
-    display: block;
-}
-
-.nav-menu .list li {
-    padding: 10px 30px;
-}
-
-.nav-menu ul {
-    list-style: none;
 }

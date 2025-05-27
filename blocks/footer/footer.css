@@ -1,0 +1,41 @@
+.footer {
+    background-color: #003862;
+}
+
+.footer nav {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 140px;
+    padding: 95px 0 130px;
+
+    a {
+        color: white;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-menu {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+    .list {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .link {
+        margin-bottom: 50px;
+    }
+}

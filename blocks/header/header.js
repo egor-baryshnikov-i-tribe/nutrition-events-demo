@@ -13,6 +13,30 @@ export default async function decorate(block) {
   const logo = document.createElement('div');
   logo.append(parsedTemplate.querySelector(".logo a"));
   logo.classList.add("logo");
+  const menu = getMenu(parsedTemplate);
+  const headerContainer = document.createElement('div');
+  headerContainer.append(logo, menu);
+  headerContainer.classList.add('header-container');
+  const header = document.querySelector('header');
+  header.classList.replace('header-wrapper', 'header');
+  header.innerHTML = headerContainer.outerHTML;
+  header.querySelectorAll('.nav-menu .item').forEach((menuItem) => {
+    menuItem.addEventListener('focusin', openMenuList);
+    menuItem.addEventListener('focusout', closeMenuList);
+  });
+}
+
+function openMenuList(list) {
+  console.log(list.target.closest('.item'))
+  list.target.closest('.item').setAttribute('aria-expanded', 'true');
+}
+
+function closeMenuList(list) {
+  console.log(list.target.closest('.item'))
+  list.target.closest('.item').setAttribute('aria-expanded', 'false');
+}
+
+export function getMenu(parsedTemplate) {
   const menuTemplate = parsedTemplate.querySelector(".menu");
   const menu = document.createElement('nav');
   const navigationList = document.createElement('ul');
@@ -34,25 +58,5 @@ export default async function decorate(block) {
     navigationList.append(menuItem);
   }
   menu.append(navigationList);
-
-  const headerContainer = document.createElement('div');
-  headerContainer.append(logo, navigationList);
-  headerContainer.classList.add('header-container');
-  const header = document.querySelector('header');
-  header.classList.replace('header-wrapper', 'header');
-  header.innerHTML = headerContainer.outerHTML;
-  header.querySelectorAll('.nav-menu .item').forEach((menuItem) => {
-    menuItem.addEventListener('focusin', openMenuList);
-    menuItem.addEventListener('focusout', closeMenuList);
-  });
-}
-
-function openMenuList(list) {
-  console.log(list.target.closest('.item'))
-  list.target.closest('.item').setAttribute('aria-expanded', 'true');
-}
-
-function closeMenuList(list) {
-  console.log(list.target.closest('.item'))
-  list.target.closest('.item').setAttribute('aria-expanded', 'false');
+  return menu;
 }
