@@ -27,12 +27,10 @@ export default async function decorate(block) {
 }
 
 function openMenuList(list) {
-  console.log(list.target.closest('.item'))
   list.target.closest('.item').setAttribute('aria-expanded', 'true');
 }
 
 function closeMenuList(list) {
-  console.log(list.target.closest('.item'))
   list.target.closest('.item').setAttribute('aria-expanded', 'false');
 }
 

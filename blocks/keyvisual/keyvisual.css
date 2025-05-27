@@ -1,0 +1,45 @@
+.section .keyvisual-wrapper {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.keyvisual-image {
+    width: 100%;
+}
+
+.keyvisual-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1160px;
+    max-height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+
+    .button-container {
+        margin-top: 50px;
+    }
+}
+
+.text {
+    padding: 30px;
+    width: 50%;
+    max-width: 430px;
+}
+
+.left {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.white {
+    color: white;
+}
