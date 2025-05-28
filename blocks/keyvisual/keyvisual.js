@@ -11,6 +11,7 @@ export default async function decorate(block) {
   const content = document.createElement('div')
   content.classList.add('keyvisual-content')
   content.appendChild(text);
+  content.querySelector('a').classList.add('button')
   block.innerHTML = '';
   block.append(image, content);
 }
