@@ -1,6 +1,10 @@
+@import "../columns/calendar.css";
+
 .columns > div {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    height: 100%;
 }
 
 .columns img {
@@ -23,11 +27,25 @@
     .columns > div {
         align-items: flex-start;
         flex-direction: unset;
-        gap: 24px;
+        gap: 100px;
     }
 
     .columns > div > div {
         flex: 1;
         order: unset;
+        height: 100%;
     }
+}
+
+.columns div div:last-child {
+    max-width: 386.66667px;
+    height: 100%;
+}
+.columns div div:first-child {
+    max-width: 773.33333px;
+}
+
+.wcp_calendar.sticky {
+    position: sticky;
+    top: 156px;
 }
