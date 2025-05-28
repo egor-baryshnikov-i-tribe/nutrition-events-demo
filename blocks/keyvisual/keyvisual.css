@@ -1,12 +1,15 @@
 .section .keyvisual-wrapper {
     padding: 0;
     width: 100%;
-    max-width: 100%;
+    margin: 0;
+    max-width: initial;
     position: relative;
+    overflow: hidden;
 }
 
-.keyvisual-image {
-    width: 100%;
+img.keyvisual-image {
+    min-height: 510px;
+    object-fit: cover;
 }
 
 .keyvisual-content {
@@ -28,6 +31,7 @@
     padding: 30px;
     width: 50%;
     max-width: 430px;
+
 }
 
 .left {
