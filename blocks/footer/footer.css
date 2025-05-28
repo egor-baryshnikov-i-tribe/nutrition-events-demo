@@ -2,7 +2,7 @@
     background-color: #003862;
 }
 
-.footer nav {
+.footer .menu {
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -38,4 +38,30 @@
     .link {
         margin-bottom: 50px;
     }
+}
+
+.footer .footer-links {
+    background-color: white;
+}
+
+.footer .footer-links,
+.footer-links a {
+    font-size: 14px;
+    color: #62656f;
+    padding: 25px 0;
+}
+
+.copyright {
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-links .container {
+    justify-content: space-between;
 }
