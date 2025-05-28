@@ -19,13 +19,10 @@ export default function decorate(block) {
   block.querySelector('div').children.item(1).classList.add('wcp_calendar')
   const observer = new IntersectionObserver((element) => {
     let target = element.pop();
-    console.log(target);
     if (target.isIntersecting) {
       target.target.classList.remove('sticky');
-      console.log('Intersecting');
     } else {
       target.target.classList.add('sticky');
-      console.log('not Intersecting element');
     }
   },
     {

@@ -65,3 +65,7 @@
 .footer-links .container {
     justify-content: space-between;
 }
+
+.footer-links .item {
+    margin-right: 32px;
+}

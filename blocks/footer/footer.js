@@ -18,8 +18,10 @@ export default async function decorate(block) {
   const logo = parsedMenuTemplate.querySelector('.footer-logo div div');
   logo.classList.add('footer-logo');
   copyright.classList.add('copyright');
-  copyright.innerHTML = parsedMenuTemplate.querySelector('.copyright div div').innerText;
-  nav.append(parsedMenuTemplate.querySelector('.footer-links div div'))
+  copyright.innerHTML = parsedMenuTemplate.querySelector('.copyright div').innerText;
+  parsedMenuTemplate.querySelectorAll('.footer-links div a').forEach((link) => {
+    nav.appendChild(link);
+  })
   for (let link of nav.children) {
     link.classList.add('item');
   }
